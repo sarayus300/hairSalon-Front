@@ -1,0 +1,76 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes quoteFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.testimonios-bg {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  right: -20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.testimonial-card {
+  opacity: 0;
+}
+
+.testimonial-card.animate {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.5s; }
+
+.quote-icon {
+  animation: quoteFloat 3s ease-in-out infinite;
+}
+
+.rating-star {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.rating-star.animate {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
+
+.rating-star:nth-child(1) { animation-delay: 0.1s; }
+.rating-star:nth-child(2) { animation-delay: 0.2s; }
+.rating-star:nth-child(3) { animation-delay: 0.3s; }
+.rating-star:nth-child(4) { animation-delay: 0.4s; }
+.rating-star:nth-child(5) { animation-delay: 0.5s; }

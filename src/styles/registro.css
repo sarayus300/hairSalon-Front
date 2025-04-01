@@ -1,0 +1,50 @@
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.registro-bg {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  right: -20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+.benefit-card {
+  opacity: 0;
+  animation: floatUp 0.6s ease-out forwards;
+}
+
+.benefit-card:nth-child(1) { animation-delay: 0.1s; }
+.benefit-card:nth-child(2) { animation-delay: 0.2s; }
+.benefit-card:nth-child(3) { animation-delay: 0.3s; }
+
+.shine-button {
+  background: linear-gradient(90deg, 
+    rgba(251, 191, 36, 0) 0%,
+    rgba(251, 191, 36, 0.4) 50%,
+    rgba(251, 191, 36, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shine 3s infinite linear;
+}
