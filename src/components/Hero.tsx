@@ -97,7 +97,7 @@ const Hero = () => {
   return (
     <div 
       id="inicio"
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden touch-none"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
